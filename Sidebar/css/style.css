@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar {
+  width: 300px;
+  background: #fbfbfb;
+}
+
+.sidebar .sidebarNavItem li {
+  margin: 2px 0 2px 15px;
+  padding: 2px 0 2px 10px;
+  border-left: 2px solid #aaa;
+}
+
+.sidebar .sidebarNavItem li ul {
+  padding-left: 12px;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.sidebar .sidebarNavItem li ul li {
+  height: 0;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  transition: .7s;
+}
+
+.sidebar .sidebarNavItem li ul li a {
+  font-size: 16px;
+  display: block;
+  padding: 12px;
+  background: rgba(20, 20, 20, 0.1);
+  transition: .3s;
+}
+
+.sidebar .sidebarNavItem li ul li a:hover {
+  background: rgba(20, 20, 20, 0.15);
+  padding-left: 13px;
+}
+
+.sidebar .sidebarNavItem li ul.visible {
+  height: auto;
+}
+
+.sidebar .sidebarNavItem li ul.visible li {
+  height: 40px;
+  border-radius: 2px;
+}
