@@ -1,0 +1,45 @@
+
+.navbar-brand
+  span
+    font-size: 1.4em
+    font-weight: bold
+    
+.navbar-toggler
+  position: relative
+  margin-top: 12px
+  height: 40px
+  width: 40px
+  padding: 0
+  border: none
+  .hamburger
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 34px
+    height: 4px
+    margin-left: 2px
+    background: white
+    transition: .4s
+    &::after, &::before
+      position: absolute
+      width: 85%
+      height: 100%
+      content: ''
+      background: white
+      transition: .7s
+    &::after
+      top: -8px
+    &::before
+      top: 8px
+
+
+.cross
+  .hamburger
+    background: transparent
+    &::after, &::before
+      width: 100%
+      top: 0
+    &::after
+      transform: rotate(45deg)
+    &::before
+      transform: rotate(135deg)

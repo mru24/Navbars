@@ -1,0 +1,58 @@
+.navbar-brand span {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  position: relative;
+  margin-top: 12px;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border: none;
+}
+
+.navbar-toggler .hamburger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 4px;
+  margin-left: 2px;
+  background: white;
+  transition: .4s;
+}
+
+.navbar-toggler .hamburger::after, .navbar-toggler .hamburger::before {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  content: '';
+  background: white;
+  transition: .7s;
+}
+
+.navbar-toggler .hamburger::after {
+  top: -8px;
+}
+
+.navbar-toggler .hamburger::before {
+  top: 8px;
+}
+
+.cross .hamburger {
+  background: transparent;
+}
+
+.cross .hamburger::after, .cross .hamburger::before {
+  width: 100%;
+  top: 0;
+}
+
+.cross .hamburger::after {
+  transform: rotate(45deg);
+}
+
+.cross .hamburger::before {
+  transform: rotate(135deg);
+}
