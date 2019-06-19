@@ -14,51 +14,78 @@ a:active {
   color: inherit;
 }
 
-.sidebar {
-  width: 300px;
-  background: #fbfbfb;
+.sidebarNavItem {
+  padding: 0;
+  margin: 0;
 }
 
-.sidebar .sidebarNavItem li {
-  margin: 2px 0 2px 15px;
-  padding: 2px 0 2px 10px;
+.sidebarNavItem > li {
+  margin: 5px 0 5px 15px;
+  padding: 2px 0 2px 15px;
   border-left: 2px solid #aaa;
 }
 
-.sidebar .sidebarNavItem li ul {
-  padding-left: 12px;
-  display: block;
-  height: 0;
-  overflow: hidden;
-  transition: 1s;
-}
-
-.sidebar .sidebarNavItem li ul li {
-  height: 0;
-  overflow: hidden;
-  border: none;
+.sidebarNavItem ul {
+  margin: 0;
   padding: 0;
-  transition: .7s;
+  margin-left: 15px;
 }
 
-.sidebar .sidebarNavItem li ul li a {
-  font-size: 16px;
+.sidebarNavItem a {
+  transition: opacity .5s;
+  opacity: .6;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.sidebarNavItem a:hover {
+  transition: opacity .5s;
+  opacity: 1;
+}
+
+.sidebarNavItem > li > a {
+  font-size: 18px;
+  padding: 10px;
   display: block;
-  padding: 12px;
-  background: rgba(20, 20, 20, 0.1);
-  transition: .3s;
 }
 
-.sidebar .sidebarNavItem li ul li a:hover {
+.sidebarNavItem > li > ul a {
+  font-size: 18px;
+  display: block;
+  line-height: 50px;
+  padding-left: 10px;
+  background: rgba(20, 20, 20, 0.05);
+  border-radius: 5px;
+}
+
+.sidebarNavItem > li > ul > li:hover a {
+  transition: .5s;
   background: rgba(20, 20, 20, 0.15);
-  padding-left: 13px;
 }
 
-.sidebar .sidebarNavItem li ul.visible {
+.sidebarNavItem > li > ul,
+.sidebarNavItem > li > ul > li > ul,
+.sidebarNavItem > li > ul > li > ul > li > ul,
+.sidebarNavItem > li > ul > li > ul > li > ul > li > ul {
+  overflow: hidden;
   height: auto;
 }
 
-.sidebar .sidebarNavItem li ul.visible li {
-  height: 40px;
-  border-radius: 2px;
+.sidebarNavItem > li > ul > li {
+  overflow: hidden;
+}
+
+.sidebarNavItem > li > ul > li > a,
+.sidebarNavItem > li > ul > li > ul > li > a,
+.sidebarNavItem > li > ul > li > ul > li > ul > li > a,
+.sidebarNavItem > li > ul > li > ul > li > ul > li > ul > li > a {
+  transition: height .4s ease-in-out;
+  height: 0;
+}
+
+.sidebarNavItem > li > ul.visible > li > a,
+.sidebarNavItem > li > ul > li > ul.visible > li > a,
+.sidebarNavItem > li > ul > li > ul > li > ul.visible > li > a,
+.sidebarNavItem > li > ul > li > ul > li > ul > li > ul.visible > li > a {
+  height: 48px;
 }
